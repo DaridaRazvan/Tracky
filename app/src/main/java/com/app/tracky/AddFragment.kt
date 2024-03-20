@@ -10,7 +10,7 @@ import com.app.tracky.data.TodoViewModel
 import kotlinx.android.synthetic.main.fragment_add.view.*
 
 class AddFragment : Fragment() {
-    private lateinit var mProductViewModel: TodoViewModel
+    private lateinit var mTodoViewModel: TodoViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -18,7 +18,7 @@ class AddFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_add, container, false)
 
-        mProductViewModel = ViewModelProvider(this)[TodoViewModel::class.java]
+        mTodoViewModel = ViewModelProvider(this)[TodoViewModel::class.java]
 
         view.bAddTodo.setOnClickListener{
             //insertDataToDatabase()
